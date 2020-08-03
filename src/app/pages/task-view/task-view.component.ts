@@ -30,6 +30,7 @@ tasks:Task[];
   onTaskClick(task:Task) {
 this.taskService.complete(task).subscribe(()=>{
   console.log("completed successfully");
+  task.completed=!task.completed;
 })
   }
 }

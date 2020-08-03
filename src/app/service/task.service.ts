@@ -22,7 +22,7 @@ export class TaskService {
   }
   complete(task: Task) {
     return this.webrequestservice.patch(`lists/${task._listId}/tasks/${task._id}`,{
-      complete: true
+      completed: !task.completed
     })
   }
 }
